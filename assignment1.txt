@@ -1,0 +1,118 @@
+ans - 1 
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n,m;
+    cout<<"enter the size of array 1"<<endl;
+    cin>>n;
+    int arr1[100],arr2[100];
+
+    cout<<"kindly enter the array 1 "<<endl;
+    for (int i = 0; i <n; i++)
+    {
+        cin>>arr1[i];
+    }
+
+    cout<<"enter the size of array 2"<<endl;
+    cin>>m;
+
+    cout<<"kindly enter the array 2 "<<endl;
+    for (int i = 0; i <m; i++)
+    {
+        cin>>arr2[i];
+    }
+    
+    for (int i = 0; i <m+n; i++)
+    {
+        arr1[n+i]=arr2[i];
+    }
+    
+    for (int i = 0; i <m+n; i++)
+    {
+        cout<<arr1[i]<<" ";
+    }
+    
+    return 0;
+}
+
+
+ans - 2 
+#include<iostream>
+using namespace std;
+int main(){
+    int n ;
+    int arr[40];
+    cout<<"Enter no. of elements :";
+    cin>>n;
+    cout<<"Enter Your Array :";
+    for(int i = 0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(int i =1;i<n;i++){
+        arr[i]=arr[i]+arr[i-1];
+    }
+    for(int i = 0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
+ans - 3
+#include<iostream>
+using namespace std;
+int main(){
+    int n ;
+    int arr[40];
+    int c[50];
+    cout<<"Enter no. of elements :";
+    cin>>n;
+    cout<<"Enter Your Array :";
+    for(int i = 0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    for(int i=0;i<n;i++){
+        int count = 0;
+        for(int j = 0;j<n;j++){
+            if(arr[i]>arr[j]){
+                count ++;
+            }
+        }
+        c[i] = count;
+    }
+    for(int i = 0;i<n;i++){
+        cout<<c[i]<<" ";
+    }
+    return 0;
+}
+
+ans - 4
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+ 
+  string sentence = "this is great thanks very much";
+  
+  int words = 0;
+  
+  int lenOfSentence = sentence.size();
+
+ 
+  for(int i = 0; i < lenOfSentence; i++)
+  {
+   
+    if(sentence[i] == ' ')
+    {
+
+      words++;
+    }
+
+  }
+  
+  words = words + 1;
+
+  cout << "No. of words = " << words << endl;
+
+}
